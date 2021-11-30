@@ -5,15 +5,8 @@
 }
 
 :root {
-  --bg-color: rgb(63, 146, 43);
-  --btn-color-hover: rgb(219, 89, 86);
-  --btn-green-light: rgb(19, 189, 189);
-  --btn-green: rgb(61, 204, 100);
-  --bg-grey1: rgb(247, 249, 255);
-  --bg-grey2: rgb(246, 247, 255);
-
   --btn-color: rgb(249, 85, 67);
-  --btn-hover: rgba(243, 77, 58 , .9);
+  --btn-hover: rgba(243, 77, 58, 0.9);
   --bar-color: rgb(40, 230, 57);
   --bar-another-color: rgb(63, 146, 43);
   --bar-text: #000;
