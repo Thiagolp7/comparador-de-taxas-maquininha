@@ -5,8 +5,11 @@
 }
 
 :root {
+  --bg-color: rgb(63, 146, 43);
+  --bg-grey1: rgb(247, 249, 255);
+  --bg-grey2: rgb(246, 247, 255);
   --btn-color: rgb(249, 85, 67);
-  --btn-hover: rgba(243, 77, 58, 0.9);
+  --btn-hover: rgba(243, 77, 58 , .9);
   --bar-color: rgb(40, 230, 57);
   --bar-another-color: rgb(63, 146, 43);
   --bar-text: #000;
@@ -19,7 +22,7 @@
 .simulation {
   width: 100vw;
   height: auto;
-  color: white;
+  color: #fff;
   background-color: var(--bg-color);
   padding: 4rem;
 
@@ -41,7 +44,7 @@
 }
 
 .simulation-data__btn-make-simulation {
-  color: white;
+  color: #fff;
   background-color: var(--btn-color);
   font-size: 1.6rem;
   line-height: 0.1;
@@ -71,7 +74,7 @@
   justify-content: space-between;
   gap: 2rem;
 
-  color: black;
+  color: #000;
   background-color: var(--bg-grey2);
 
   padding: 3rem 3rem;
@@ -114,7 +117,7 @@
 }
 
 .simulation-data__btn-make-simulation:hover {
-  background-color: var(--btn-color-hover);
+  background-color: var(--btn-hover);
 }
 
 .container__img {
