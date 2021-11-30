@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Simule suas taxas!</title>
+  </head>
+  <body>
+    <section class="simulation">
+      
+      <div class="container " id="container-principal">
+        <div class="simulation-data">
+          <h2 class="simulation-data__title">
+            Simule seu pagamento com nossas taxas!
+          </h2>
+
+          <div class="card">
+            <div class="elements">
+              <label for="valor" class="elements__label"
+                >Valor total (R$)</label
+              >
+              <input type="number" class="elements__input" id="valor-total" placeholder="Digite o valor total que irá pagar" min='0' pattern="[0-9]" required="required"/>
+            </div>
+
+            <div class="elements">
+              <label for="n-parcelas" class="elements__label">Parcelas</label>
+              <select
+                name="n-parcelas"
+                class="elements__select"
+                id="n-parcelas"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+
+            <div class="elements">
+              <label for="tipo-pagamento" class="elements__label"
+                >Tipo de pagamento</label
+              >
+              <select
+                name="tipo-pagamento"
+                id="tipo-pagamento"
+                class="elements__select"
+              >
+                <option value="debito">Débito (1,90% por mês)</option>
+                <option value="credito">Crédito (7,6% por mês)</option>
+              </select>
+            </div>
+            
+            <div class="elements elements--row">
+              <input type="checkbox" id="comparar-check" unchecked>
+              <label for="tipo-pagamento" class="elements__label"
+                >Comparar com outras taxas</label
+              >
+            </div>
+            
+            <div class="elements disable" id="comparar-taxa-container">
+              <label for="tipo-pagamento" class="elements__label"
+              >Taxa a comparar (%)</label
+              >
+              <input type="number" class="elements__input" id="comparar-taxa-field" placeholder="Ex.: 2,1" min="0" max="100" >
+            </div>
+
+            <button class="simulation-data__btn-make-simulation" id="btn-simular">Simule</button>
+          </div>
+        </div>
+        <img
+          src="./assets/maquininha_desconto.webp"
+          alt="uma imagem qualquer"
+          class="container__img"
+        />
+      </div>
+
+      <div class="container container--disable" id="container-secundario">
+        <img
+          src="./assets/maquininha_taxas.webp"
+          alt="uma imagem qualquer"
+          class="container__img"
+        />
+        <div class="simulation-data">
+          <h2 class="simulation-data__title">Pague menos com a gente!</h2>
+          <div class="card">
+
+            <div class="elements">
+              <p class="elements__label">Valor Total</p>
+              <div class="graph">
+
+                  <div class="graph__bar" id="valor-total-bar">
+                    <span>Com a gente</span>
+                    <span id='valor-total-text'>R$1100</span>
+                  </div>
+
+                  <div class="graph__bar graph__bar--another disable" id="valor-total-bar-another">
+                    <span> Com o concorrente </span>
+                    <span id="valor-total-text-another"> R$1300 </span>
+                  </div>
+
+                </div>
+              </div>
+
+            <div class="elements">
+              <p class="elements__label">Valor da parcela</p>
+              <div class="graph">
+                  <div class="graph__bar" id="parcela-bar">
+                    <span>Com a gente</span>
+                    <span id="parcela-text"> R$1100 </span>
+                  </div>
+                  <div class="graph__bar graph__bar--another disable" id="parcela-bar-another" >
+                    <span> Com o concorrente </span>
+                    <span id="parcela-text-another"> R$1300 </span>
+                  </div>
+                </div>
+              </div>
+          
+            <div class="elements">
+              <p class="elements__label">Taxa mensal</p>
+              <div class="graph graph--fee">
+                  <div class="graph__bar" id="taxa-mensal-bar">
+                    <span>Nossa taxa</span>
+                    <span id="taxa-mensal-text"> R$1100 </span>
+                  </div>
+                  <div class="graph__bar graph__bar--another disable" id="taxa-mensal-bar-another">
+                    <span> Outra taxa </span>
+                    <span id="taxa-mensal-text-another"> R$1300 </span>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="elements">
+              <p class="elements__label">Total pago em taxas</p>
+              <div class="graph graph--fee">
+                  <div class="graph__bar" id="taxa-total-bar">
+                    <span>Nossa taxa</span>
+                    <span id="taxa-total-text"> R$1100 </span>
+                  </div>
+                  <div class="graph__bar graph__bar--another disable" id="taxa-total-bar-another">
+                    <span> Outra taxa </span>
+                    <span id="taxa-total-text-another"> R$1300 </span>
+                  </div>
+                </div>
+              </div>
+              <button class="simulation-data__btn-make-simulation" id="btn-simular-novamente">Simular novamente</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
